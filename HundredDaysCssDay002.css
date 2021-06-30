@@ -1,0 +1,140 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: #3faf82;
+  border-radius: 8px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.menu {
+  cursor: pointer;
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  left: 35%;
+  top: 35%;
+}
+
+.menu-item {
+  position: absolute;
+  height: 10px;
+  width: 90px;
+  border-radius: 5px;
+  transform: translate(-50%,-300%);
+  background: white;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.menu-item.b {
+  transform: translate(-50%,-50%);
+}
+.menu-item.c {
+  transform: translate(-50%,200%);
+}
+
+.menu.open .a {
+  animation: spin-top 0.5s ease-in-out forwards;
+}
+.menu.open .b {
+  animation: fade-out 0.5s ease-in-out forwards;
+}
+.menu.open .c {
+  animation: spin-bottom 0.5s ease-in-out forwards;
+}
+
+.menu.close .a {
+  animation: spin-top-rev 0.5s ease-in-out forwards;
+}
+.menu.close .b {
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+.menu.close .c {
+  animation: spin-bottom-rev 0.5s ease-in-out forwards;
+}
+
+@keyframes spin-top {
+  0% {
+    transform: translate(-50%,-300%);
+  }
+  50% {
+    transform: translate(-50%,-50%);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+}
+@keyframes spin-top-rev {
+  0% {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  50% {
+    transform: translate(-50%,-50%);
+  }
+  100% {
+    transform: translate(-50%,-300%);
+  }
+}
+@keyframes spin-bottom {
+  0% {
+    transform: translate(-50%,200%);
+  }
+  50% {
+    transform: translate(-50%,-50%);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(135deg);
+  }
+}
+@keyframes spin-bottom-rev {
+  0% {
+    transform: translate(-50%,-50%) rotate(135deg);
+  }
+  50% {
+    transform: translate(-50%,-50%);
+  }
+  100% {
+    transform: translate(-50%,200%);
+  }
+}
+@keyframes fade-out {
+  0% {
+    background: white;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    height: 10px;
+    width: 90px;
+  }
+  50%, 100% {
+    background: transparent;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+    height: 5px;
+    width: 40px;
+  }
+}
+@keyframes fade-in {
+  0%, 50% {
+    background: transparent;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+    height: 5px;
+    width: 40px;
+  }
+  100% {
+    background: white;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    height: 10px;
+    width: 90px;
+  }
+}
