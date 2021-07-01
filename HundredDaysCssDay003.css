@@ -1,0 +1,119 @@
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #272c34;
+	border-radius: 8px;
+}
+
+.scene {
+	background: #7ddfcc;
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	border-radius: 100%;
+	left: 25%;
+	top: 25%;
+	overflow: hidden;
+}
+
+.filter {
+	background: #272c34;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 5;
+	opacity: 0;
+	animation: filterit 3s ease-in-out infinite;
+}
+
+.sun {
+  position: absolute;
+  background: #ffef00;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  top: 80%;
+  left: 40%;
+  animation: moveit 3s linear infinite;
+  z-index: 0;
+}
+
+.sand {
+	position: absolute;
+	height: 33%;
+	bottom: 0%;
+	width: 100%;
+	background: #f0de75;
+	z-index: 2;
+}
+
+.pyramid {
+	background: #dddada;
+	position: absolute;
+	height: 35%;
+	width: 70%;
+	left: 15%;
+	bottom: 30%;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  overflow: hidden;
+	animation: shade-right 3s linear infinite;
+}
+
+.pyramid::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 60%;
+	background: #f4f4f4;
+	clip-path: polygon(0 0, 83% 0%, 100% 100%, 0% 100%);
+	animation: shade-left 3s linear infinite;
+}
+
+.pyramid-shadow {
+	background: #c0b25e;
+	position: absolute;
+	height: 25%;
+	width: 160%;
+	top: 67%;
+	left: -30%;
+	z-index: 4;
+	clip-path: polygon(30% 0, 100% 100%, 70% 0);
+	animation: shadowit 3s linear infinite;
+}
+
+@keyframes moveit {
+    0% { transform: rotate(30deg) translateX(-150px) rotate(30deg); }
+    25%, 40% { transform: rotate(70deg) translateX(-150px) rotate(-70deg);  }
+    90%, 100%{ transform: rotate(160deg) translateX(-150px) rotate(-160deg);  }
+}
+@keyframes shade-left {
+  0%, 30% { background: white; }
+  100% { background: lightgrey; }
+}
+@keyframes shade-right {
+  0%, 10% { background: lightgrey; }
+  80%, 100% { background: white; }
+}
+@keyframes filterit {
+  0% { opacity: 0.5; }
+  25%, 75% { opacity: 0; }
+  95%, 100% { opacity: 1;  }
+}
+
+
+@keyframes shadowit {
+    0% { clip-path: polygon(30% 0, 100% 100%, 70% 0); height: 1%;}
+    25%, 40% { clip-path: polygon(30% 0, 70% 100%, 70% 0); height: 15%; }
+	  50% { height: 5%;  }
+    75% { clip-path: polygon(30% 0, 5% 100%, 70% 0); height: 15%; }
+	  100% { clip-path: polygon(30% 0, 0 100%, 70% 0); height: 1%;}
+}
