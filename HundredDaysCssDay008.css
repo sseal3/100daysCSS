@@ -1,0 +1,588 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 8px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: black;
+  filter: contrast(3000%);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ball {
+  position: relative;
+  background: pink;
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  filter: blur(17px);
+}
+
+.jelly-1 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(47deg);
+}
+.jelly-1:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 42px 42px;
+  -webkit-animation: move-it 2.8666666667s ease-in-out 0.1666666667s infinite;
+          animation: move-it 2.8666666667s ease-in-out 0.1666666667s infinite;
+  filter: blur(5px);
+}
+
+.breaker-1 {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(131deg);
+}
+.breaker-1:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 8px;
+  width: 8px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 61.8px 61.8px;
+  -webkit-animation: move-it 3.5666666667s ease-in-out 0.1666666667s infinite;
+          animation: move-it 3.5666666667s ease-in-out 0.1666666667s infinite;
+  filter: blur(3px);
+}
+
+.jelly-2 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(163deg);
+}
+.jelly-2:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 39px 39px;
+  -webkit-animation: move-it 3.0333333333s ease-in-out 0.3333333333s infinite;
+          animation: move-it 3.0333333333s ease-in-out 0.3333333333s infinite;
+  filter: blur(5px);
+}
+
+.breaker-2 {
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(120deg);
+}
+.breaker-2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 9px;
+  width: 9px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 59.6px 59.6px;
+  -webkit-animation: move-it 3.7333333333s ease-in-out 0.3333333333s infinite;
+          animation: move-it 3.7333333333s ease-in-out 0.3333333333s infinite;
+  filter: blur(3px);
+}
+
+.jelly-3 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(168deg);
+}
+.jelly-3:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 36px 36px;
+  -webkit-animation: move-it 3.2s ease-in-out 0.5s infinite;
+          animation: move-it 3.2s ease-in-out 0.5s infinite;
+  filter: blur(5px);
+}
+
+.breaker-3 {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(236deg);
+}
+.breaker-3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 10px;
+  width: 10px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 57.4px 57.4px;
+  -webkit-animation: move-it 3.9s ease-in-out 0.5s infinite;
+          animation: move-it 3.9s ease-in-out 0.5s infinite;
+  filter: blur(3px);
+}
+
+.jelly-4 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(1deg);
+}
+.jelly-4:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 33px 33px;
+  -webkit-animation: move-it 3.3666666667s ease-in-out 0.6666666667s infinite;
+          animation: move-it 3.3666666667s ease-in-out 0.6666666667s infinite;
+  filter: blur(5px);
+}
+
+.breaker-4 {
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(79deg);
+}
+.breaker-4:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 11px;
+  width: 11px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 55.2px 55.2px;
+  -webkit-animation: move-it 4.0666666667s ease-in-out 0.6666666667s infinite;
+          animation: move-it 4.0666666667s ease-in-out 0.6666666667s infinite;
+  filter: blur(3px);
+}
+
+.jelly-5 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(207deg);
+}
+.jelly-5:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 30px 30px;
+  -webkit-animation: move-it 3.5333333333s ease-in-out 0.8333333333s infinite;
+          animation: move-it 3.5333333333s ease-in-out 0.8333333333s infinite;
+  filter: blur(5px);
+}
+
+.breaker-5 {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(250deg);
+}
+.breaker-5:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 12px;
+  width: 12px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 53px 53px;
+  -webkit-animation: move-it 4.2333333333s ease-in-out 0.8333333333s infinite;
+          animation: move-it 4.2333333333s ease-in-out 0.8333333333s infinite;
+  filter: blur(3px);
+}
+
+.jelly-6 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(360deg);
+}
+.jelly-6:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 27px 27px;
+  -webkit-animation: move-it 3.7s ease-in-out 1s infinite;
+          animation: move-it 3.7s ease-in-out 1s infinite;
+  filter: blur(5px);
+}
+
+.breaker-6 {
+  position: absolute;
+  height: 13px;
+  width: 13px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(260deg);
+}
+.breaker-6:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 13px;
+  width: 13px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 50.8px 50.8px;
+  -webkit-animation: move-it 4.4s ease-in-out 1s infinite;
+          animation: move-it 4.4s ease-in-out 1s infinite;
+  filter: blur(3px);
+}
+
+.jelly-7 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(101deg);
+}
+.jelly-7:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 24px 24px;
+  -webkit-animation: move-it 3.8666666667s ease-in-out 1.1666666667s infinite;
+          animation: move-it 3.8666666667s ease-in-out 1.1666666667s infinite;
+  filter: blur(5px);
+}
+
+.breaker-7 {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(178deg);
+}
+.breaker-7:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 14px;
+  width: 14px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 48.6px 48.6px;
+  -webkit-animation: move-it 4.5666666667s ease-in-out 1.1666666667s infinite;
+          animation: move-it 4.5666666667s ease-in-out 1.1666666667s infinite;
+  filter: blur(3px);
+}
+
+.jelly-8 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(150deg);
+}
+.jelly-8:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 21px 21px;
+  -webkit-animation: move-it 4.0333333333s ease-in-out 1.3333333333s infinite;
+          animation: move-it 4.0333333333s ease-in-out 1.3333333333s infinite;
+  filter: blur(5px);
+}
+
+.breaker-8 {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(250deg);
+}
+.breaker-8:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 15px;
+  width: 15px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 46.4px 46.4px;
+  -webkit-animation: move-it 4.7333333333s ease-in-out 1.3333333333s infinite;
+          animation: move-it 4.7333333333s ease-in-out 1.3333333333s infinite;
+  filter: blur(3px);
+}
+
+.jelly-9 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(44deg);
+}
+.jelly-9:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 18px 18px;
+  -webkit-animation: move-it 4.2s ease-in-out 1.5s infinite;
+          animation: move-it 4.2s ease-in-out 1.5s infinite;
+  filter: blur(5px);
+}
+
+.breaker-9 {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(280deg);
+}
+.breaker-9:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 16px;
+  width: 16px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 44.2px 44.2px;
+  -webkit-animation: move-it 4.9s ease-in-out 1.5s infinite;
+          animation: move-it 4.9s ease-in-out 1.5s infinite;
+  filter: blur(3px);
+}
+
+.jelly-10 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(142deg);
+}
+.jelly-10:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 15px 15px;
+  -webkit-animation: move-it 4.3666666667s ease-in-out 1.6666666667s infinite;
+          animation: move-it 4.3666666667s ease-in-out 1.6666666667s infinite;
+  filter: blur(5px);
+}
+
+.breaker-10 {
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(261deg);
+}
+.breaker-10:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 17px;
+  width: 17px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 42px 42px;
+  -webkit-animation: move-it 5.0666666667s ease-in-out 1.6666666667s infinite;
+          animation: move-it 5.0666666667s ease-in-out 1.6666666667s infinite;
+  filter: blur(3px);
+}
+
+.jelly-11 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(24deg);
+}
+.jelly-11:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 12px 12px;
+  -webkit-animation: move-it 4.5333333333s ease-in-out 1.8333333333s infinite;
+          animation: move-it 4.5333333333s ease-in-out 1.8333333333s infinite;
+  filter: blur(5px);
+}
+
+.breaker-11 {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(230deg);
+}
+.breaker-11:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 18px;
+  width: 18px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 39.8px 39.8px;
+  -webkit-animation: move-it 5.2333333333s ease-in-out 1.8333333333s infinite;
+          animation: move-it 5.2333333333s ease-in-out 1.8333333333s infinite;
+  filter: blur(3px);
+}
+
+.jelly-12 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  left: 20px;
+  transform: rotate(332deg);
+}
+.jelly-12:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: pink;
+  border-radius: 100%;
+  transform-origin: 9px 9px;
+  -webkit-animation: move-it 4.7s ease-in-out 2s infinite;
+          animation: move-it 4.7s ease-in-out 2s infinite;
+  filter: blur(5px);
+}
+
+.breaker-12 {
+  position: absolute;
+  height: 19px;
+  width: 19px;
+  top: 38px;
+  left: 38px;
+  background: white;
+  transform: rotate(19deg);
+}
+.breaker-12:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 19px;
+  width: 19px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: 37.6px 37.6px;
+  -webkit-animation: move-it 5.4s ease-in-out 2s infinite;
+          animation: move-it 5.4s ease-in-out 2s infinite;
+  filter: blur(3px);
+}
+
+@-webkit-keyframes move-it {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move-it {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
