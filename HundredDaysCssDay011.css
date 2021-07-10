@@ -1,0 +1,128 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #f6e8d7;
+  background: radial-gradient(circle at center, #f6e8d7 0%, #dabe9b 100%);
+}
+
+.floor {
+  position: absolute;
+  bottom: 0%;
+  height: 40%;
+  width: 100%;
+  background: #232323;
+}
+
+.shoe-set {
+  -webkit-animation: fade-in 1s both;
+          animation: fade-in 1s both;
+}
+
+.leg {
+  position: absolute;
+  height: 158px;
+  width: 50px;
+  left: 200px;
+  transform-origin: 50% 0%;
+  transform: rotate(50deg);
+  -webkit-animation: leg-move 2s ease-in-out infinite;
+          animation: leg-move 2s ease-in-out infinite;
+}
+
+.rear {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+.shoe {
+  position: absolute;
+  left: -45px;
+  top: 60%;
+  height: 160px;
+  width: 150px;
+  background: url("https://100dayscss.com/codepen/doc-martens.svg") center center no-repeat;
+  -webkit-animation: shoe-move 2s ease-in-out infinite;
+          animation: shoe-move 2s ease-in-out infinite;
+  transform-origin: 0 90%;
+}
+
+.last {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+@-webkit-keyframes leg-move {
+  0%, 100% {
+    transform: rotate(-22deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes leg-move {
+  0%, 100% {
+    transform: rotate(-22deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+}
+@-webkit-keyframes shoe-move {
+  0% {
+    transform: rotate(-10deg) translateY(-5px) translateX(10px);
+  }
+  25% {
+    transform: rotate(0deg) translateY(0px) translateX(0);
+  }
+  50% {
+    transform: rotate(10deg) translateY(-10px) translateX(10px);
+  }
+  75% {
+    transform: rotate(0deg) translateY(-30px) translateX(0);
+  }
+  100% {
+    transform: rotate(-10deg) translateY(-5px) translateX(10px);
+  }
+}
+@keyframes shoe-move {
+  0% {
+    transform: rotate(-10deg) translateY(-5px) translateX(10px);
+  }
+  25% {
+    transform: rotate(0deg) translateY(0px) translateX(0);
+  }
+  50% {
+    transform: rotate(10deg) translateY(-10px) translateX(10px);
+  }
+  75% {
+    transform: rotate(0deg) translateY(-30px) translateX(0);
+  }
+  100% {
+    transform: rotate(-10deg) translateY(-5px) translateX(10px);
+  }
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
