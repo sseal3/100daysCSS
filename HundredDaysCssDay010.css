@@ -1,0 +1,379 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4c4c4c;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.base {
+  height: 220px;
+  width: 220px;
+  background: black;
+  border: 5px solid #3a3a3a;
+  border-radius: 100%;
+}
+
+.red-wrapper {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  left: 10px;
+  top: 10px;
+  background: black;
+  border-radius: 100%;
+}
+
+.red-round {
+  position: absolute;
+  box-sizing: border-box;
+  height: 200px;
+  width: 100px;
+  border: 4px solid crimson;
+  transform-origin: 100% 50%;
+}
+
+.spinner {
+  border-radius: 100px 0px 0px 100px;
+  border-right-color: transparent;
+  -webkit-animation: spin-round 5s infinite linear;
+          animation: spin-round 5s infinite linear;
+  z-index: 20;
+}
+
+.filler {
+  border-radius: 0px 100px 100px 0px;
+  border-left-color: transparent;
+  left: 50%;
+  -webkit-animation: fill-round 5s linear infinite;
+          animation: fill-round 5s linear infinite;
+  z-index: 10;
+  transform-origin: 0% 50%;
+  opacity: 0;
+}
+
+.left-mask {
+  width: 51%;
+  height: 101%;
+  top: -0.5%;
+  left: 50%;
+  position: absolute;
+  z-index: 15;
+  opacity: 1;
+  background: inherit;
+  border-radius: 0px 110px 110px 0px;
+  -webkit-animation: mask-left 5s steps(1, end) infinite;
+          animation: mask-left 5s steps(1, end) infinite;
+}
+
+.right-mask {
+  width: 51%;
+  height: 101%;
+  top: -0.5%;
+  left: -1%;
+  position: absolute;
+  z-index: 30;
+  opacity: 1;
+  background: inherit;
+  border-radius: 110px 0px 0px 110px;
+  -webkit-animation: mask-right 5s steps(1, end) infinite;
+          animation: mask-right 5s steps(1, end) infinite;
+}
+
+.dots {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='4' stroke-dasharray='2%2c 6' stroke-dashoffset='2' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border-radius: 100px;
+  z-index: 40;
+}
+
+.data-wrapper {
+  position: absolute;
+  height: 80px;
+  width: 120px;
+  left: 55px;
+  top: 75px;
+  z-index: 50;
+  color: white;
+  padding: 0;
+}
+
+.data {
+  position: relative;
+  font-size: 14px;
+  margin: auto;
+  text-align: center;
+}
+
+.time {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 42px;
+}
+
+.beat {
+  position: absolute;
+  bottom: 3px;
+  left: 21px;
+  font-size: 14px;
+}
+
+.cals {
+  position: absolute;
+  bottom: 3px;
+  right: 0px;
+  font-size: 14px;
+}
+
+.heart {
+  background: crimson;
+  position: absolute;
+  bottom: 6.5px;
+  left: 4px;
+  height: 9px;
+  width: 9px;
+  transform: rotate(-45deg);
+  -webkit-animation: beatit 1s linear infinite;
+          animation: beatit 1s linear infinite;
+}
+
+.heart::before {
+  content: "";
+  background: inherit;
+  border-radius: 100%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  height: 9px;
+  width: 9px;
+}
+
+.heart::after {
+  content: "";
+  background: inherit;
+  border-radius: 100%;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  height: 9px;
+  width: 9px;
+}
+
+@-webkit-keyframes beatit {
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+  10% {
+    transform: rotate(-45deg) scale(1.1);
+  }
+  20% {
+    transform: rotate(-45deg) scale(0.9);
+  }
+  30% {
+    transform: rotate(-45deg) scale(1.2);
+  }
+  40% {
+    transform: rotate(-45deg) scale(0.9);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  60% {
+    transform: rotate(-45deg) scale(0.95);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+
+@keyframes beatit {
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+  10% {
+    transform: rotate(-45deg) scale(1.1);
+  }
+  20% {
+    transform: rotate(-45deg) scale(0.9);
+  }
+  30% {
+    transform: rotate(-45deg) scale(1.2);
+  }
+  40% {
+    transform: rotate(-45deg) scale(0.9);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  60% {
+    transform: rotate(-45deg) scale(0.95);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+@-webkit-keyframes spin-round {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+@keyframes spin-round {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+@-webkit-keyframes fill-round {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes fill-round {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes mask-right {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mask-right {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes mask-left {
+  0% {
+    opacity: 1;
+    z-index: 15;
+  }
+  25% {
+    opacity: 0;
+    z-index: 15;
+  }
+  50% {
+    opacity: 0;
+    z-index: 15;
+  }
+  75% {
+    opacity: 1;
+    z-index: 35;
+  }
+  100% {
+    opacity: 1;
+    z-index: 35;
+  }
+}
+@keyframes mask-left {
+  0% {
+    opacity: 1;
+    z-index: 15;
+  }
+  25% {
+    opacity: 0;
+    z-index: 15;
+  }
+  50% {
+    opacity: 0;
+    z-index: 15;
+  }
+  75% {
+    opacity: 1;
+    z-index: 35;
+  }
+  100% {
+    opacity: 1;
+    z-index: 35;
+  }
+}
