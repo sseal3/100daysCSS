@@ -1,0 +1,372 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: white;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.profile {
+  position: absolute;
+  height: 194px;
+  width: 194px;
+  margin: 3px;
+  padding: 1px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.top-right {
+  right: 0%;
+}
+
+.bottom-left {
+  bottom: 0%;
+}
+
+.bottom-right {
+  bottom: 0%;
+  right: 0%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0;
+}
+
+.plus {
+  position: absolute;
+  background: #ec6565;
+  height: 30%;
+  width: 30%;
+  left: 35%;
+  top: 35%;
+  border-radius: 100%;
+  z-index: 2;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.plus::before {
+  content: "";
+  background: white;
+  position: absolute;
+  width: 40%;
+  height: 6%;
+  left: 30%;
+  top: 47%;
+  border-radius: 5px;
+}
+
+.plus::after {
+  content: "";
+  background: white;
+  position: absolute;
+  height: 40%;
+  width: 6%;
+  top: 30%;
+  left: 47%;
+  border-radius: 5px;
+}
+
+.profile:hover .plus {
+  opacity: 1;
+  transform: scale(0.75) translate3d(0, 0, 0);
+}
+.profile:hover .overlay {
+  opacity: 0.4;
+}
+
+.detail {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.cover {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  top: -60%;
+  background: black;
+}
+
+.pic {
+  position: absolute;
+  top: -60%;
+  margin-top: 32%;
+  left: 37%;
+  height: 26%;
+  width: 26%;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: 2px solid white;
+  overflow: hidden;
+  z-index: 3;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.close-button {
+  opacity: 1;
+  transform: scale(0.4) rotate(45deg);
+  position: absolute;
+  top: 0%;
+  margin-top: -5%;
+  left: 75%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.close-button:hover {
+  background: white;
+}
+.close-button:hover:after, .close-button:hover:before {
+  background: #ec6565;
+}
+
+.bottom {
+  position: absolute;
+  height: 55%;
+  bottom: 0%;
+  width: 100%;
+  background: #ec6565;
+  z-index: 2;
+}
+
+.name {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  margin: auto;
+  margin-top: 80px;
+  color: white;
+  text-align: center;
+  z-index: 5;
+}
+
+.buttons {
+  height: 50px;
+  width: 70%;
+  left: 15%;
+  position: absolute;
+  margin: auto;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.media {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background: inherit;
+  border: 2px solid white;
+  border-radius: 100%;
+  margin-left: 38px;
+  color: white;
+}
+.media:hover {
+  background: white;
+  color: #ec6565;
+  cursor: pointer;
+}
+
+.fa {
+  margin-top: 12px;
+  margin-left: 9px;
+}
+
+.heart {
+  background: white;
+  position: absolute;
+  bottom: 10px;
+  left: 12.5px;
+  height: 15px;
+  width: 15px;
+  transform: rotate(-45deg);
+}
+
+.heart::before {
+  content: "";
+  background: inherit;
+  border-radius: 100%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  height: 15px;
+  width: 15px;
+}
+
+.heart::after {
+  content: "";
+  background: inherit;
+  border-radius: 100%;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  height: 15px;
+  width: 15px;
+}
+
+.close-button.open {
+  -webkit-animation: slide-down 1s ease-out both;
+          animation: slide-down 1s ease-out both;
+}
+
+.close-button.close {
+  -webkit-animation: slide-up 1s ease-in both;
+          animation: slide-up 1s ease-in both;
+}
+
+.cover.open {
+  -webkit-animation: slide-down 1s ease-out both;
+          animation: slide-down 1s ease-out both;
+}
+
+.cover.close {
+  -webkit-animation: slide-up 1s ease-in both;
+          animation: slide-up 1s ease-in both;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.pic.open {
+  -webkit-animation: slide-down 1s ease-out both;
+          animation: slide-down 1s ease-out both;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.pic.close {
+  -webkit-animation: slide-up 1s ease-in both;
+          animation: slide-up 1s ease-in both;
+}
+
+.detail.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.detail.close {
+  -webkit-animation: slow-hide 1.5s steps(1, end) forwards;
+          animation: slow-hide 1.5s steps(1, end) forwards;
+  pointer-events: none;
+}
+
+.bottom.open {
+  -webkit-animation: bottoms-up 1s ease-out forwards;
+          animation: bottoms-up 1s ease-out forwards;
+}
+
+.bottom.close {
+  -webkit-animation: bottoms-down 1s ease-in forwards;
+          animation: bottoms-down 1s ease-in forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    top: -60%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    top: -60%;
+  }
+  to {
+    top: 0%;
+  }
+}
+@-webkit-keyframes slide-up {
+  from {
+    top: 0%;
+  }
+  to {
+    top: -60%;
+  }
+}
+@keyframes slide-up {
+  from {
+    top: 0%;
+  }
+  to {
+    top: -60%;
+  }
+}
+@-webkit-keyframes bottoms-up {
+  from {
+    bottom: -60%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+@keyframes bottoms-up {
+  from {
+    bottom: -60%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+@-webkit-keyframes bottoms-down {
+  from {
+    bottom: 0%;
+  }
+  to {
+    bottom: -60%;
+  }
+}
+@keyframes bottoms-down {
+  from {
+    bottom: 0%;
+  }
+  to {
+    bottom: -60%;
+  }
+}
+@-webkit-keyframes slow-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slow-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
