@@ -1,0 +1,295 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4B4841;
+}
+
+.card {
+  position: absolute;
+  top: 28%;
+  left: 10%;
+  height: 44%;
+  width: 80%;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  background: #FFCE4E;
+  border-radius: 3px;
+  box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateX(180deg) translate3d(0, 0, 0);
+  box-shadow: 8px -10px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.bike-side {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: rotateX(0);
+}
+
+.bike-wrapper {
+  position: absolute;
+  bottom: 25%;
+  left: 30%;
+  transform-origin: 50% 100%;
+  -webkit-animation: bounce-bike 0.3s ease-in-out alternate infinite;
+          animation: bounce-bike 0.3s ease-in-out alternate infinite;
+}
+
+.road {
+  position: absolute;
+  height: 10px;
+  width: 50%;
+  left: 25%;
+  bottom: 22%;
+  overflow: hidden;
+}
+
+.bump {
+  position: absolute;
+  height: 3px;
+  width: 20px;
+  left: -50%;
+  background: #4B4841;
+  border-radius: 2px;
+  -webkit-animation: slide-across 1.8s linear infinite;
+          animation: slide-across 1.8s linear infinite;
+}
+
+.bump:nth-child(2) {
+  width: 10px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.bump:nth-child(3) {
+  width: 13px;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.bump:nth-child(4) {
+  width: 7px;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.bump:nth-child(5) {
+  width: 5px;
+  -webkit-animation: slide-across 1.9s linear infinite;
+          animation: slide-across 1.9s linear infinite;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.bump:nth-child(6) {
+  width: 3px;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.bump:nth-child(7) {
+  width: 10px;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.bump:nth-child(8) {
+  width: 16px;
+  -webkit-animation: slide-across 1.9s linear infinite;
+          animation: slide-across 1.9s linear infinite;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.bump:nth-child(9) {
+  width: 4px;
+  -webkit-animation: slide-across 2.1s linear infinite;
+          animation: slide-across 2.1s linear infinite;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.bump:nth-child(10) {
+  width: 8px;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.heli-side {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: rotateX(180deg);
+}
+
+.heli-wrapper {
+  position: absolute;
+  bottom: 25%;
+  left: 30%;
+  -webkit-animation: bounce-heli 0.7s ease-in-out alternate infinite;
+          animation: bounce-heli 0.7s ease-in-out alternate infinite;
+}
+
+.sky {
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  left: 25%;
+  bottom: 10%;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  height: 2.5px;
+  width: 20px;
+  left: -50%;
+  background: #4B4841;
+  border-radius: 2px;
+  -webkit-animation: slide-across 1.2s linear infinite;
+          animation: slide-across 1.2s linear infinite;
+}
+
+.cloud:nth-child(2) {
+  top: 10%;
+  width: 15px;
+  -webkit-animation: slide-across 1.9s linear infinite;
+          animation: slide-across 1.9s linear infinite;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+.cloud:nth-child(3) {
+  top: 19%;
+  width: 22px;
+  -webkit-animation: slide-across 2.1s linear infinite;
+          animation: slide-across 2.1s linear infinite;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+.cloud:nth-child(4) {
+  top: 29%;
+  width: 27px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.cloud:nth-child(5) {
+  top: 36%;
+  width: 18px;
+  -webkit-animation: slide-across 1.7s linear infinite;
+          animation: slide-across 1.7s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.cloud:nth-child(6) {
+  top: 48%;
+  -webkit-animation: slide-across 2.1s linear infinite;
+          animation: slide-across 2.1s linear infinite;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.cloud:nth-child(7) {
+  top: 56%;
+  width: 23px;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+.cloud:nth-child(8) {
+  top: 66%;
+  width: 10px;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+.cloud:nth-child(9) {
+  top: 79%;
+  width: 12px;
+  -webkit-animation: slide-across 1.7s linear infinite;
+          animation: slide-across 1.7s linear infinite;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.cloud:nth-child(10) {
+  top: 95%;
+  width: 28px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+@-webkit-keyframes bounce-bike {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.95);
+  }
+}
+
+@keyframes bounce-bike {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.95);
+  }
+}
+@-webkit-keyframes bounce-heli {
+  from {
+    bottom: 25%;
+  }
+  to {
+    bottom: 30%;
+  }
+}
+@keyframes bounce-heli {
+  from {
+    bottom: 25%;
+  }
+  to {
+    bottom: 30%;
+  }
+}
+@-webkit-keyframes slide-across {
+  from {
+    left: 150%;
+  }
+  to {
+    left: -50%;
+  }
+}
+@keyframes slide-across {
+  from {
+    left: 150%;
+  }
+  to {
+    left: -50%;
+  }
+}
